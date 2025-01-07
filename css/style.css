@@ -19,6 +19,10 @@
     font-family: 'Playfair Display', serif;
 }
 
+.font-ampersand {
+    font-family: 'Baskerville', serif;
+}
+
 .animate-fadeIn {
     animation: fadeIn 1s ease-in;
 }
