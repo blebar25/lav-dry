@@ -13,6 +13,11 @@
     --color-estate-700: #334155;
     --color-estate-800: #1e293b;
     --color-estate-900: #0f172a;
+    --primary-blue: #2196F3;     /* Bleu frais et moderne */
+    --light-blue: #E3F2FD;       /* Bleu très clair pour le fond */
+    --deep-blue: #1565C0;        /* Bleu profond pour les accents */
+    --clean-white: #FFFFFF;      /* Blanc pur */
+    --gray-light: #F5F5F5;       /* Gris très clair */
 }
 
 .font-display {
@@ -48,12 +53,20 @@ body {
     background-color: #1e293b;
 }
 
+.bg-estate-100 {
+    background-color: var(--light-blue);
+}
+
 .text-estate-600 {
-    color: #1e293b;
+    color: #424242;
 }
 
 .text-estate-300 {
-    color: #1e293b;
+    color: #616161;
+}
+
+.text-estate-800 {
+    color: var(--deep-blue);
 }
 
 /* Hero section */
@@ -182,6 +195,36 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 50px;
+}
+
+/* Entrepreneur section */
+.entrepreneur-section {
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--clean-white) 100%);
+    padding: 4rem 0;
+}
+
+.entrepreneur-card {
+    background: var(--clean-white);
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.entrepreneur-card:hover {
+    transform: translateY(-5px);
+}
+
+.primary-button {
+    background-color: var(--primary-blue);
+    color: var(--clean-white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+    background-color: var(--deep-blue);
 }
 
 /* Footer styles */
