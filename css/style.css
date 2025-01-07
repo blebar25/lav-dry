@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 :root {
-    --color-estate-50: #f8fafc;
     --color-estate-100: #f1f5f9;
     --color-estate-200: #e2e8f0;
     --color-estate-300: #cbd5e1;
@@ -13,11 +12,11 @@
     --color-estate-700: #334155;
     --color-estate-800: #1e293b;
     --color-estate-900: #0f172a;
-    --primary-blue: #2196F3;     /* Bleu frais et moderne */
-    --light-blue: #E3F2FD;       /* Bleu très clair pour le fond */
-    --deep-blue: #1565C0;        /* Bleu profond pour les accents */
-    --clean-white: #FFFFFF;      /* Blanc pur */
-    --gray-light: #F5F5F5;       /* Gris très clair */
+    --laundry-blue: #007AFF;      /* Bleu vif pour les accents */
+    --laundry-light: #E8F3FF;     /* Bleu très clair pour les fonds */
+    --laundry-dark: #005EC4;      /* Bleu foncé pour le hover */
+    --fresh-white: #FFFFFF;       /* Blanc pur */
+    --soft-gray: #F8FAFC;        /* Gris très doux */
 }
 
 .font-display {
@@ -33,11 +32,11 @@
 }
 
 @keyframes fadeIn {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(20px);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
@@ -46,43 +45,39 @@
 /* Global styles */
 body {
     font-family: 'Inter', sans-serif;
-    color: #1e293b;
+    color: var(--color-estate-600);
 }
 
 .bg-estate-800 {
-    background-color: #1e293b;
-}
-
-.bg-estate-100 {
-    background-color: var(--light-blue);
+    background-color: var(--color-estate-800);
 }
 
 .text-estate-600 {
-    color: #424242;
+    color: var(--color-estate-600);
 }
 
 .text-estate-300 {
-    color: #616161;
-}
-
-.text-estate-800 {
-    color: var(--deep-blue);
+    color: var(--color-estate-300);
 }
 
 /* Hero section */
 .hero-section {
-    background: linear-gradient(to right, #1e293b, #334155);
+    background: linear-gradient(to right, var(--color-estate-800), var(--color-estate-700));
     color: white;
+}
+
+.hero-overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 /* Navigation */
 .nav-link {
-    color: #1e293b;
+    color: var(--fresh-white);
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #3b82f6;
+    color: var(--laundry-light);
 }
 
 /* Map styles */
@@ -94,7 +89,7 @@ body {
 
 /* Card styles */
 .laverie-card {
-    background: white;
+    background: var(--soft-gray);
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
@@ -139,50 +134,50 @@ body {
 
 .laverie-card .card-content {
     padding: 1.25rem;
-    background-color: white;
+    background-color: var(--fresh-white);
 }
 
 .laverie-card h3 {
-    color: #1e293b;
+    color: var(--color-estate-600);
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .laverie-card p {
-    color: #1e293b;
+    color: var(--color-estate-600);
     font-size: 0.875rem;
     margin: 0;
 }
 
 .laverie-card p span {
-    color: #1e293b;
+    color: var(--color-estate-600);
 }
 
 .laverie-card .location-link {
-    color: #1e293b;
+    color: var(--color-estate-600);
     padding: 0.5rem;
     border-radius: 50%;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f1f5f9;
+    background-color: var(--laundry-light);
 }
 
 .laverie-card .location-link:hover {
-    background-color: #e2e8f0;
+    background-color: var(--laundry-blue);
 }
 
 .laverie-card svg {
     width: 16px;
     height: 16px;
-    fill: #1e293b;
+    fill: var(--color-estate-600);
 }
 
 /* Section titles */
 .section-title {
-    color: #1e293b;
+    color: var(--color-estate-600);
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
@@ -197,45 +192,104 @@ body {
     margin-bottom: 50px;
 }
 
+/* Services section */
+.service-card {
+    background-color: var(--soft-gray);
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--laundry-light);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 122, 255, 0.1);
+}
+
+.service-icon {
+    color: var(--laundry-blue);
+}
+
 /* Entrepreneur section */
 .entrepreneur-section {
-    background: linear-gradient(135deg, var(--light-blue) 0%, var(--clean-white) 100%);
-    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--laundry-light) 0%, var(--fresh-white) 100%);
+    padding: 5rem 0;
 }
 
 .entrepreneur-card {
-    background: var(--clean-white);
-    border-radius: 1rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    transition: transform 0.3s ease;
+    background: var(--fresh-white);
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 40px rgba(0, 122, 255, 0.08);
+    padding: 3rem;
+    border: 1px solid rgba(0, 122, 255, 0.1);
 }
 
-.entrepreneur-card:hover {
+.feature-card {
+    background: var(--fresh-white);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--laundry-light);
+}
+
+.feature-card:hover {
     transform: translateY(-5px);
 }
 
+.feature-icon {
+    color: var(--laundry-blue);
+}
+
 .primary-button {
-    background-color: var(--primary-blue);
-    color: var(--clean-white);
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s ease;
+    background-color: var(--laundry-blue);
+    color: var(--fresh-white);
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 122, 255, 0.1);
 }
 
 .primary-button:hover {
-    background-color: var(--deep-blue);
+    background-color: var(--laundry-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 122, 255, 0.2);
+}
+
+.secondary-button {
+    color: var(--laundry-blue);
+    background-color: var(--laundry-light);
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.secondary-button:hover {
+    background-color: var(--laundry-blue);
+    color: var(--fresh-white);
+}
+
+/* Text colors */
+.text-laundry {
+    color: var(--laundry-blue);
+}
+
+.text-estate-600 {
+    color: var(--color-estate-600);
+}
+
+.text-estate-300 {
+    color: var(--color-estate-300);
 }
 
 /* Footer styles */
 footer {
-    background-color: #1e293b;
-    color: white;
-    padding: 3rem 0;
+    background-color: var(--color-estate-800);
+    color: var(--fresh-white);
 }
 
 footer h3 {
-    color: white;
+    color: var(--fresh-white);
 }
 
 footer p, 
@@ -243,26 +297,13 @@ footer li,
 footer a,
 footer .text-estate-300,
 footer .text-estate-400 {
-    color: white !important;
+    color: var(--fresh-white) !important;
 }
 
 footer a:hover {
-    color: #e2e8f0 !important;
+    color: var(--laundry-light) !important;
 }
 
 footer .border-estate-700 {
     @apply border-opacity-30;
-}
-
-/* Buttons */
-.btn-primary {
-    background-color: #1e293b;
-    border-color: #1e293b;
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #334155;
-    border-color: #334155;
 }
