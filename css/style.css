@@ -12,9 +12,9 @@
     --color-estate-700: #334155;
     --color-estate-800: #1e293b;
     --color-estate-900: #0f172a;
-    --laundry-blue: #007AFF;      /* Bleu vif pour les accents */
+    --laundry-blue: #007AFF;      /* Bleu principal */
     --laundry-light: #E8F3FF;     /* Bleu très clair pour les fonds */
-    --laundry-dark: #005EC4;      /* Bleu foncé pour le hover */
+    --laundry-dark: #0056B3;      /* Version plus foncée pour le hover */
     --fresh-white: #FFFFFF;       /* Blanc pur */
     --soft-gray: #F8FAFC;        /* Gris très doux */
 }
@@ -62,12 +62,12 @@ body {
 
 /* Hero section */
 .hero-section {
-    background: linear-gradient(to right, var(--color-estate-800), var(--color-estate-700));
+    background: linear-gradient(to right, var(--laundry-dark), var(--laundry-blue));
     color: white;
 }
 
 .hero-overlay {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(rgba(0, 122, 255, 0.1), rgba(0, 86, 179, 0.2));
 }
 
 /* Navigation */
@@ -77,7 +77,11 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--laundry-light);
+    color: var(--laundry-blue);
+}
+
+.navbar {
+    background: linear-gradient(to right, var(--laundry-blue), var(--laundry-dark));
 }
 
 /* Map styles */
@@ -90,6 +94,7 @@ body {
 /* Card styles */
 .laverie-card {
     background: var(--soft-gray);
+    border: 1px solid var(--laundry-light);
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
@@ -100,7 +105,8 @@ body {
 
 .laverie-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: var(--laundry-blue);
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.1);
 }
 
 .laverie-card .carousel {
@@ -241,23 +247,21 @@ body {
 
 .primary-button {
     background-color: var(--laundry-blue);
-    color: var(--fresh-white);
+    color: white;
     padding: 1rem 2rem;
     border-radius: 0.75rem;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
     font-weight: 500;
     box-shadow: 0 4px 6px rgba(0, 122, 255, 0.1);
 }
 
 .primary-button:hover {
     background-color: var(--laundry-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 122, 255, 0.2);
 }
 
 .secondary-button {
+    border: 2px solid var(--laundry-blue);
     color: var(--laundry-blue);
-    background-color: var(--laundry-light);
     padding: 1rem 2rem;
     border-radius: 0.75rem;
     transition: all 0.3s ease;
@@ -266,7 +270,7 @@ body {
 
 .secondary-button:hover {
     background-color: var(--laundry-blue);
-    color: var(--fresh-white);
+    color: white;
 }
 
 /* Text colors */
@@ -280,6 +284,16 @@ body {
 
 .text-estate-300 {
     color: var(--color-estate-300);
+}
+
+/* Links */
+a {
+    color: var(--laundry-blue);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--laundry-dark);
 }
 
 /* Footer styles */
