@@ -1,17 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Liste des laveries
     const locations = [
-        { id: 1, name: '30 rue Pinel', city: 'Saint Denis', zip: '93200', lat: 48.9362, lng: 2.3574 },
-        { id: 2, name: '27 rue Ramey', city: 'Paris', zip: '75018', lat: 48.8879, lng: 2.3476 },
-        { id: 3, name: '20 rue de Lancry', city: 'Paris', zip: '75010', lat: 48.8697, lng: 2.3589 },
-        { id: 4, name: '12 rue Popincourt', city: 'Paris', zip: '75011', lat: 48.8589, lng: 2.3741 },
-        { id: 5, name: '3 rue Thiers', city: 'Marseille', zip: '13001', lat: 43.2965, lng: 5.3698 },
-        { id: 6, name: '52 rue des Gravilliers', city: 'Paris', zip: '75004', lat: 48.8637, lng: 2.3542 },
-        { id: 7, name: '122 avenue de Flandre', city: 'Paris', zip: '75019', lat: 48.8912, lng: 2.3745 },
-        { id: 8, name: '14 boulevard de la Fédération', city: 'Marseille', zip: '13004', lat: 43.3025, lng: 5.3892 },
-        { id: 9, name: '3 rue de Douai', city: 'Lille', zip: '59000', lat: 50.6292, lng: 3.0573 },
-        { id: 10, name: '61 place de l\'Hôtel de Ville', city: 'Villeneuve d\'Ascq', zip: '59650', lat: 50.6193, lng: 3.1421 },
-        { id: 11, name: '45 Place de la Victoire', city: 'Tourcoing', zip: '59200', lat: 50.7237, lng: 3.1589 }
+        { id: 1, name: '140 rue Peyssonnelle', city: 'Marseille', zip: '13002', lat: 43.3115, lng: 5.3651 },
+        { id: 2, name: '8-24 rue Jean Jaurès', city: 'Noisy-le-Sec', zip: '93130', lat: 48.8897, lng: 2.4539 },
+        { id: 3, name: '111-115 rue d\'Arras', city: 'Faches-Thumesnil', zip: '59115', lat: 50.5947, lng: 3.0745 },
+        { id: 4, name: '9 boulevard du Général Leclerc', city: 'Roubaix', zip: '59100', lat: 50.6902, lng: 3.1797 },
+        { id: 5, name: '51-55 avenue de la République', city: 'Lomme', zip: '59160', lat: 50.6397, lng: 3.0097 },
+        { id: 6, name: '106 boulevard Marguerite de Rochechouart', city: 'Paris', zip: '75018', lat: 48.8828, lng: 2.3437 },
+        { id: 7, name: '749 Avenue de Dunkerque', city: 'Lomme', zip: '59160', lat: 50.6397, lng: 3.0097 },
+        { id: 8, name: '50 Rue Albert Bailly', city: 'Marcq-en-Baroeul', zip: '59700', lat: 50.6745, lng: 3.0931 },
+        { id: 9, name: '94 rue d\'Hurlupin', city: 'Comines', zip: '59760', lat: 50.7484, lng: 3.0097 },
+        { id: 10, name: '66 rue du Bournard', city: 'Colombes', zip: '92700', lat: 48.9232, lng: 2.2548 },
+        { id: 11, name: '5 rue St Gabriel', city: 'Lille', zip: '59000', lat: 50.6329, lng: 3.0573 },
+        { id: 12, name: '74 cours de la Liberté', city: 'Lyon', zip: '69003', lat: 45.7589, lng: 4.8430 },
+        { id: 13, name: '162 Cours du Docteur Long', city: 'Lyon', zip: '69003', lat: 45.7508, lng: 4.8867 },
+        { id: 14, name: '227 rue Alfred Motte', city: 'Roubaix', zip: '59100', lat: 50.6902, lng: 3.1797 },
+        { id: 15, name: '139 rue Dauphiné', city: 'Lyon', zip: '69003', lat: 45.7508, lng: 4.8867 },
+        { id: 16, name: '2 rue David', city: 'Lyon', zip: '69003', lat: 45.7589, lng: 4.8430 },
+        { id: 17, name: '14 place Gabriel Rambaud', city: 'Lyon', zip: '69001', lat: 45.7694, lng: 4.8322 },
+        { id: 18, name: '3 avenue du Général Brosset', city: 'Écully', zip: '69160', lat: 45.7833, lng: 4.7833 },
+        { id: 19, name: '22 rue du Lieutenant Colonel Girard', city: 'Lyon', zip: '69007', lat: 45.7508, lng: 4.8867 },
+        { id: 20, name: '78 cours Émile Zola', city: 'Villeurbanne', zip: '69100', lat: 45.7694, lng: 4.8867 },
+        { id: 21, name: '23 rue Franklin', city: 'Lyon', zip: '69002', lat: 45.7508, lng: 4.8322 },
+        { id: 22, name: '22 rue Étienne Richerand', city: 'Lyon', zip: '69003', lat: 45.7589, lng: 4.8430 }
     ];
 
     // Images génériques pour les carrousels
@@ -25,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('laveries-container');
     if (container) {
         container.innerHTML = locations.map(location => `
-            <div class="laverie-card bg-gradient-to-b from-blue-50 to-white">
-                <div id="carousel${location.id}" class="carousel slide relative" data-bs-ride="carousel">
+            <div class="laverie-card bg-gradient-to-b from-blue-50 to-white p-4 rounded-lg shadow-lg">
+                <div id="carousel${location.id}" class="carousel slide relative rounded-lg overflow-hidden" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         ${genericImages.map((img, index) => `
                             <div class="carousel-item ${index === 0 ? 'active' : ''}">
@@ -43,20 +54,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                <div class="card-content">
+                <div class="card-content mt-4">
                     <div class="flex justify-between items-start">
                         <div>
-                            <h3>${location.name}</h3>
-                            <p>${location.city}, <span class="font-medium">${location.zip}</span></p>
+                            <h3 class="text-lg font-semibold text-estate-800">${location.name}</h3>
+                            <p class="text-estate-600">${location.city}, <span class="font-medium">${location.zip}</span></p>
                         </div>
-                        <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.name + ' ' + location.city + ' ' + location.zip)}" 
-                           class="location-link"
-                           target="_blank"
-                           title="Voir sur Google Maps">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z M12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
-                            </svg>
-                        </a>
+                        <div class="flex gap-2">
+                            <button class="directions-btn bg-gray-100 hover:bg-gray-200 p-2 rounded-md transition-colors" 
+                                    data-lat="${location.lat}" 
+                                    data-lng="${location.lng}">
+                                <svg viewBox="0 0 24 24" class="w-5 h-5 text-gray-600">
+                                    <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,6 +84,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 touch: true
             });
         });
+
+        // Ajouter les événements click pour les boutons d'itinéraire
+        document.querySelectorAll('.directions-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const lat = btn.dataset.lat;
+                const lng = btn.dataset.lng;
+                const directionsUrl = await getDirectionsUrl(lat, lng);
+                window.open(directionsUrl, '_blank');
+            });
+        });
     }
 
     // Initialiser la carte
@@ -80,21 +102,62 @@ document.addEventListener('DOMContentLoaded', () => {
         attribution: ' OpenStreetMap contributors'
     }).addTo(map);
 
+    // Fonction pour obtenir l'URL de l'itinéraire Google Maps
+    function getDirectionsUrl(destLat, destLng) {
+        return new Promise((resolve) => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const origin = `${position.coords.latitude},${position.coords.longitude}`;
+                        const destination = `${destLat},${destLng}`;
+                        resolve(`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&travelmode=driving`);
+                    },
+                    () => {
+                        // En cas d'erreur ou de refus, utiliser juste la destination
+                        resolve(`https://www.google.com/maps/dir/?api=1&destination=${destLat},${destLng}&travelmode=driving`);
+                    }
+                );
+            } else {
+                // Si la géolocalisation n'est pas supportée
+                resolve(`https://www.google.com/maps/dir/?api=1&destination=${destLat},${destLng}&travelmode=driving`);
+            }
+        });
+    }
+
     // Ajouter les marqueurs
+    const markers = [];
     locations.forEach(location => {
         const marker = L.marker([location.lat, location.lng]).addTo(map);
-        marker.bindPopup(`
-            <div class="text-center">
-                <strong class="text-estate-800">${location.name}</strong><br>
-                <span class="text-estate-600">${location.city}, <span class="font-medium">${location.zip}</span></span><br>
-                <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.name + ' ' + location.city + ' ' + location.zip)}" 
-                   target="_blank"
-                   class="text-estate-600 hover:text-estate-800 text-sm inline-block mt-2">
-                   Voir sur Google Maps
-                </a>
-            </div>
-        `);
+        
+        // Créer le contenu du popup avec le bouton d'itinéraire
+        const popupContent = document.createElement('div');
+        popupContent.className = 'text-center';
+        popupContent.innerHTML = `
+            <strong class="text-estate-800 block mb-2 text-lg">${location.name}</strong>
+            <span class="text-estate-600 block mb-3">${location.city}, ${location.zip}</span>
+            <button class="directions-btn bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors flex items-center mx-auto">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                </svg>
+                Itinéraire
+            </button>
+        `;
+
+        // Ajouter l'événement click sur le bouton d'itinéraire
+        const directionsBtn = popupContent.querySelector('.directions-btn');
+        directionsBtn.addEventListener('click', async () => {
+            const directionsUrl = await getDirectionsUrl(location.lat, location.lng);
+            window.open(directionsUrl, '_blank');
+        });
+
+        // Créer le popup avec le contenu personnalisé
+        marker.bindPopup(popupContent);
+        markers.push(marker);
     });
+
+    // Ajuster la vue de la carte pour montrer tous les marqueurs
+    const group = new L.featureGroup(markers);
+    map.fitBounds(group.getBounds().pad(0.1));
 
     // Smooth scroll pour les liens d'ancrage
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
