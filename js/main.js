@@ -10,19 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 7, name: '749 Avenue de Dunkerque', city: 'Lomme', zip: '59160', lat: 50.6397, lng: 3.0097 },
         { id: 8, name: '50 Rue Albert Bailly', city: 'Marcq-en-Baroeul', zip: '59700', lat: 50.6745, lng: 3.0931 },
         { id: 9, name: '94 rue d\'Hurlupin', city: 'Comines', zip: '59760', lat: 50.7484, lng: 3.0097 },
-        { id: 10, name: '66 rue du Bournard', city: 'Colombes', zip: '92700', lat: 48.9232, lng: 2.2548 },
-        { id: 11, name: '5 rue St Gabriel', city: 'Lille', zip: '59000', lat: 50.6329, lng: 3.0573 },
-        { id: 12, name: '74 cours de la Liberté', city: 'Lyon', zip: '69003', lat: 45.7589, lng: 4.8430 },
-        { id: 13, name: '162 Cours du Docteur Long', city: 'Lyon', zip: '69003', lat: 45.7508, lng: 4.8867 },
-        { id: 14, name: '227 rue Alfred Motte', city: 'Roubaix', zip: '59100', lat: 50.6902, lng: 3.1797 },
-        { id: 15, name: '139 rue Dauphiné', city: 'Lyon', zip: '69003', lat: 45.7508, lng: 4.8867 },
-        { id: 16, name: '2 rue David', city: 'Lyon', zip: '69003', lat: 45.7589, lng: 4.8430 },
-        { id: 17, name: '14 place Gabriel Rambaud', city: 'Lyon', zip: '69001', lat: 45.7694, lng: 4.8322 },
-        { id: 18, name: '3 avenue du Général Brosset', city: 'Écully', zip: '69160', lat: 45.7833, lng: 4.7833 },
-        { id: 19, name: '22 rue du Lieutenant Colonel Girard', city: 'Lyon', zip: '69007', lat: 45.7508, lng: 4.8867 },
-        { id: 20, name: '78 cours Émile Zola', city: 'Villeurbanne', zip: '69100', lat: 45.7694, lng: 4.8867 },
-        { id: 21, name: '23 rue Franklin', city: 'Lyon', zip: '69002', lat: 45.7508, lng: 4.8322 },
-        { id: 22, name: '22 rue Étienne Richerand', city: 'Lyon', zip: '69003', lat: 45.7589, lng: 4.8430 }
+        { id: 10, name: '66 rue du Bournard', city: 'Colombes', zip: '92700', lat: 48.9232, lng: 2.2548 }
     ];
 
     // Images génériques pour les carrousels
@@ -36,7 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('laveries-container');
     if (container) {
         container.innerHTML = locations.map(location => `
-            <div class="laverie-card bg-gradient-to-b from-blue-50 to-white p-4 rounded-lg shadow-lg">
+            <div class="laverie-card bg-gradient-to-b from-blue-50 to-white p-4 rounded-lg shadow-lg relative">
+                ${location.id === 4 || location.id === 10 ? 
+                    `<div class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">Séchoir PAC</div>` : 
+                    location.name.toLowerCase().includes('séchoir') ? 
+                    `<div class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">Exclusif</div>` : 
+                    ''}
                 <div id="carousel${location.id}" class="carousel slide relative rounded-lg overflow-hidden" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         ${genericImages.map((img, index) => `
