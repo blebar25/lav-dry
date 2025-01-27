@@ -17,6 +17,7 @@
     --laundry-dark: #0056B3;      /* Version plus foncée pour le hover */
     --fresh-white: #FFFFFF;       /* Blanc pur */
     --soft-gray: #F8FAFC;        /* Gris très doux */
+    --tw-gradient-from: rgb(0 83 174 / 50%);
 }
 
 .font-display {
