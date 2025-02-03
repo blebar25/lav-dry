@@ -26,9 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML = locations.map(location => `
             <div class="laverie-card bg-gradient-to-b from-blue-50 to-white p-4 rounded-lg shadow-lg relative">
                 ${location.id === 4 || location.id === 10 ? 
-                    `<div class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">Séchoir PAC</div>` : 
+                    `<div class="absolute top-2 right-2 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">Séchoir écologique</div>` : 
+                    location.id === 6 ?
+                    `<div class="absolute top-2 right-2 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">Lessive offerte</div>` :
                     location.name.toLowerCase().includes('séchoir') ? 
-                    `<div class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">Exclusif</div>` : 
+                    `<div class="absolute top-2 right-2 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">Écologique</div>` : 
                     ''}
                 <div id="carousel${location.id}" class="carousel slide relative rounded-lg overflow-hidden" data-bs-ride="carousel">
                     <div class="carousel-inner">

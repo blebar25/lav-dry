@@ -21,7 +21,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#services" class="text-white hover:text-white/80 transition-colors">Nos tarifs</a>
                     <a href="#locations" class="text-white hover:text-white/80 transition-colors">Nos laveries</a>
-                    <a href="tel:+33749245848" class="text-white hover:text-white/80 transition-colors">Nous Contacter</a>
+                    <a href="#footer" class="text-white hover:text-white/80 transition-colors">Nous Contacter</a>
                     <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border hover:text-accent-foreground h-10 px-4 py-2 text-black border-white bg-white hover:bg-white/90">
                         <a class="btn-savoir-plus btn-light" href="#entrepreneur">
                             Ouvrir une laverie</a>
@@ -57,7 +57,7 @@
     <section id="services" class="py-20" style="background: linear-gradient(135deg, var(--laundry-light) 0%, var(--fresh-white) 100%);">
         <div class="container mx-auto px-4 max-w-6xl">
             <h2 style="color:#007AFF;" class="text-4xl font-display text-estate-800 mb-12 text-center">Nos tarifs</h2>
-            <p class="text-center text-estate-600 mb-8">Profitez de machines à laver et séchoirs Electrolux, adaptés à vos besoins et à des prix compétitifs</p>
+            <p class="text-center text-estate-600 mb-8">Profitez de machines à laver <span style="background-color: #007AFF;" class="inline-flex items-center rounded-md px-2 py-1 font-medium text-white">rapides et super essorantes</span> ainsi que de séchoirs Electrolux, adaptés à vos besoins et à des prix compétitifs</p>
             <div class="flex flex-col gap-8">
                 <!-- Machines à laver -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -81,11 +81,11 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div style="background-color: #F7F7F7;" class="bg-estate-100 p-6 rounded-lg text-center animate-fadeIn shadow-lg">
                         <svg style="color:#007AFF;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-timer w-8 h-8 mx-auto mb-4 text-estate-800"><line x1="10" x2="14" y1="2" y2="2"></line><line x1="12" x2="15" y1="14" y2="11"></line><circle cx="12" cy="14" r="8"></circle></svg>
-                        <h3 class="text-xl font-semibold mb-2">Séchoir Gaz<br>9 minutes</h3>
+                        <h3 class="text-xl font-semibold mb-2">Séchoir<br>9 minutes</h3>
                         <p class="text-2xl text-estate-800  mb-1">1,50€</p>
                     </div>
                     <div style="background-color: #F7F7F7;" class="bg-estate-100 p-6 rounded-lg text-center animate-fadeIn shadow-lg relative">
-                        <div class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">Exclusivement</div>
+                        <div class="absolute top-2 right-2 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">Écologique</div>
                         <svg style="color:#007AFF;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wind w-8 h-8 mx-auto mb-4 text-estate-800"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"></path><path d="M9.6 4.6A2 2 0 1 1 11 8H2"></path><path d="M12.6 19.4A2 2 0 1 0 14 16H2"></path></svg>
                         <h3 class="text-xl font-semibold mb-2">Séchoir PAC<br>20 minutes</h3>
                         <p class="text-2xl text-estate-800  mb-1">2,00€</p>
@@ -154,7 +154,7 @@
         </div>
     </section>
     
-    <footer style="background-color: #262626;" class="text-white py-16">
+    <footer id="footer" style="background-color: #262626;" class="text-white py-16">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="text-center md:text-left">
