@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 15, name: '139 rue dauphiné', city: 'Lyon', zip: '69003', lat: 50.6397, lng: 3.0097 },
         { id: 16, name: '2 rue David', city: 'Lyon', zip: '69003', lat: 48.8828, lng: 2.3437 },
         { id: 17, name: '14 place gabriel Rambaud', city: 'Lyon', zip: '69001', lat: 50.6397, lng: 3.0097 },
-        { id: 18, name: '3 Av du general brosset', city: 'Tassin-la-Demi-Lune', zip: '69160', lat: 50.6745, lng: 3.0931 },
+        { id: 18, name: '', city: 'Aubervilliers', zip: '93300', lat: 48.912435, lng: 2.3834617 },
         { id: 19, name: '22 rue du lieutenant colonel Girard', city: 'Lyon', zip: '69007', lat: 50.7484, lng: 3.0097 },
         { id: 20, name: '78 Cr. Emile Zola', city: 'Villeurbanne', zip: '69100', lat: 48.9232, lng: 2.2548 },
         { id: 21, name: '23 rue Franklin ', city: 'Lyon', zip: '69002', lat: 50.7484, lng: 3.0097 },
@@ -32,6 +32,29 @@ document.addEventListener('DOMContentLoaded', () => {
         'https://images.unsplash.com/photo-1521656693074-0ef32e80a5d5',
         'https://images.unsplash.com/photo-1517677208171-0bc6725a3e60'
     ];
+
+    // Images spécifiques pour certaines laveries
+    const specificImages = {
+        1: [ // Peyssonnel
+            'images/Peyssonnel/WhatsApp Image 2025-02-11 at 12.42.10.jpeg',
+            'images/Peyssonnel/WhatsApp Image 2025-02-11 at 12.41.20.jpeg',
+            'images/Peyssonnel/WhatsApp Image 2025-02-11 at 12.41.40.jpeg',
+            'images/Peyssonnel/WhatsApp Image 2025-02-11 at 12.42.46.jpeg',
+            'images/Peyssonnel/WhatsApp Image 2025-02-11 at 12.44.14.jpeg',
+            'images/Peyssonnel/WhatsApp Image 2025-02-11 at 12.46.18.jpeg'
+        ],
+        3: [ // Faches
+            'images/Faches/PHOTO-2024-12-16-12-18-26.jpg',
+            'images/Faches/PHOTO-2024-12-16-12-18-22.jpg'
+        ],
+        5: [ // Lomme République
+            'images/Lomme_republique/REPUBLIQUE_1.jpg',
+            'images/Lomme_republique/REPUBLIQUE_2.jpg',
+            'images/Lomme_republique/REPUBLIQUE_3.jpg',
+            'images/Lomme_republique/REPUBLIQUE_10.jpg',
+            'images/Lomme_republique/REPUBLIQUE_16.jpg'
+        ]
+    };
 
     // Générer les carrousels
     const container = document.getElementById('laveries-container');
@@ -49,9 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     ''}
                 <div id="carousel${location.id}" class="carousel slide relative rounded-lg overflow-hidden" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        ${genericImages.map((img, index) => `
+                        ${(specificImages[location.id] || genericImages).map((img, index) => `
                             <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                                <img src="${img}?q=80&w=800&auto=format&fit=crop" class="d-block w-100" alt="Laverie ${index + 1}">
+                                <img src="${img}${!specificImages[location.id] ? '?q=80&w=800&auto=format&fit=crop' : ''}" class="d-block w-100" alt="Laverie ${location.name}">
                             </div>
                         `).join('')}
                     </div>

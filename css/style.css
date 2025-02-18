@@ -401,3 +401,176 @@ footer .border-estate-700 {
     font-weight: 500;
     box-shadow: 0 4px 6px rgba(0, 122, 255, 0.1);
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    /* Navigation */
+    .nav-mobile-menu {
+        display: block;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--laundry-blue);
+        z-index: 49;
+        padding: 5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .mobile-menu a {
+        color: white;
+        font-size: 1.25rem;
+        text-decoration: none;
+    }
+
+    /* Map */
+    #map {
+        min-height: 300px;
+    }
+
+    /* Cards */
+    .laverie-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .laverie-card .carousel {
+        height: 250px;
+    }
+
+    .laverie-card img {
+        height: 250px;
+    }
+
+    .laverie-card .carousel-item {
+        height: 250px;
+    }
+
+    /* Carousel Controls */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 15% !important;
+        opacity: 0.8 !important;
+    }
+
+    /* Touch Targets */
+    button,
+    .btn,
+    a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Modal */
+    .modal-dialog {
+        margin: 0.5rem;
+        max-width: calc(100% - 1rem);
+    }
+
+    /* Grid */
+    .grid {
+        grid-gap: 1rem !important;
+    }
+
+    /* Map Controls */
+    .leaflet-touch .leaflet-control-zoom a {
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+    }
+
+    /* Section spacing */
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Typography */
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    .text-xl {
+        font-size: 1.1rem;
+    }
+
+    /* Entrepreneur section */
+    .entrepreneur-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    /* Cards */
+    .laverie-card .carousel {
+        height: 200px;
+    }
+
+    .laverie-card img {
+        height: 200px;
+    }
+
+    .laverie-card .carousel-item {
+        height: 200px;
+    }
+
+    /* Typography */
+    h2 {
+        font-size: 1.75rem !important;
+    }
+
+    .text-xl {
+        font-size: 1rem;
+    }
+
+    /* Spacing */
+    section {
+        padding: 2rem 0.75rem;
+    }
+
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+/* Styles de base */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.grid {
+    grid-gap: 1.5rem;
+}
