@@ -53,6 +53,15 @@ document.addEventListener('DOMContentLoaded', () => {
             'images/Lomme_republique/REPUBLIQUE_3.jpg',
             'images/Lomme_republique/REPUBLIQUE_10.jpg',
             'images/Lomme_republique/REPUBLIQUE_16.jpg'
+        ],
+        14: [ // Roubaix Motte
+            'images/RoubaixM/RM1.jpeg',
+            'images/RoubaixM/RM2.jpeg',
+            'images/RoubaixM/RM3.jpeg',
+            'images/RoubaixM/RM4.jpeg',
+            'images/RoubaixM/RM5.jpeg',
+            'images/RoubaixM/RM6.jpeg',
+            'images/RoubaixM/RM7.jpeg'
         ]
     };
 
