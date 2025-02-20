@@ -47,6 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
             'images/Faches/PHOTO-2024-12-16-12-18-26.jpg',
             'images/Faches/PHOTO-2024-12-16-12-18-27.jpg'
         ],
+        4: [ // Roubaix GL
+            'images/RoubaixGL/RGL1.jpeg',
+            'images/RoubaixGL/RGL2.jpeg',
+            'images/RoubaixGL/RGL3.jpeg',
+            'images/RoubaixGL/RGL4.jpeg',
+            'images/RoubaixGL/RGL5.jpeg'
+        ],
         5: [ // Lomme République
             'images/Lomme_republique/REPUBLIQUE_1.jpg',
             'images/Lomme_republique/REPUBLIQUE_2.jpg',
