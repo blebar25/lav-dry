@@ -45,14 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         3: [ // Faches
             'images/Faches/PHOTO-2024-12-16-12-18-26.jpg',
-            'images/Faches/PHOTO-2024-12-16-12-18-22.jpg'
+            'images/Faches/PHOTO-2024-12-16-12-18-27.jpg'
         ],
         5: [ // Lomme République
             'images/Lomme_republique/REPUBLIQUE_1.jpg',
             'images/Lomme_republique/REPUBLIQUE_2.jpg',
             'images/Lomme_republique/REPUBLIQUE_3.jpg',
-            'images/Lomme_republique/REPUBLIQUE_10.jpg',
-            'images/Lomme_republique/REPUBLIQUE_16.jpg'
+            'images/Lomme_republique/REPUBLIQUE_4.jpg',
+            'images/Lomme_republique/REPUBLIQUE_5.jpg'        
         ],
         14: [ // Roubaix Motte
             'images/RoubaixM/RM1.jpeg',
