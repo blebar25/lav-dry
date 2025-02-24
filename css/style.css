@@ -473,8 +473,7 @@ footer .border-estate-700 {
 
     /* Touch Targets */
     button,
-    .btn,
-    a {
+    .btn {
         min-height: 44px;
         min-width: 44px;
     }
@@ -519,6 +518,38 @@ footer .border-estate-700 {
     /* Entrepreneur section */
     .entrepreneur-card {
         padding: 1.5rem;
+    }
+
+    /* Footer Styles */
+    #footer {
+        text-align: center;
+    }
+
+    #footer .grid {
+        gap: 2rem;
+    }
+
+    #footer h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    #footer ul {
+        margin: 0 auto;
+        max-width: 200px;
+    }
+
+    #footer .text-center.md\:text-left {
+        text-align: center !important;
+    }
+
+    #footer .space-y-3 {
+        margin-bottom: 1.5rem;
+    }
+
+    #footer p {
+        margin: 0 auto;
+        max-width: 280px;
     }
 }
 
