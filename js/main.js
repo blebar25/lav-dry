@@ -43,6 +43,16 @@ document.addEventListener('DOMContentLoaded', () => {
             'images/Peyssonnel/WhatsApp Image 2025-02-11 at 12.44.14.jpeg',
             'images/Peyssonnel/WhatsApp Image 2025-02-11 at 12.46.18.jpeg'
         ],
+        2: [ // Noisy
+            'images/Noisy/Noisy_1.JPG',
+            'images/Noisy/Noisy_2.JPG',
+            'images/Noisy/Noisy_3.JPG',
+            'images/Noisy/Noisy_4.JPG',
+            'images/Noisy/Noisy_5.JPG',
+            'images/Noisy/Noisy_6.JPG',
+            'images/Noisy/Noisy_7.JPG',
+            'images/Noisy/Noisy_8.JPG'
+        ],
         3: [ // Faches
             'images/Faches/PHOTO-2024-12-16-12-18-26.jpg',
             'images/Faches/PHOTO-2024-12-16-12-18-27.jpg'
@@ -60,6 +70,39 @@ document.addEventListener('DOMContentLoaded', () => {
             'images/Lomme_republique/REPUBLIQUE_3.jpg',
             'images/Lomme_republique/REPUBLIQUE_4.jpg',
             'images/Lomme_republique/REPUBLIQUE_5.jpg'        
+        ],
+        7: [ // Lomme_d
+            'images/Lomme_d/Lomme_d_1.jpeg',
+            'images/Lomme_d/Lomme_d_2.jpeg',
+            'images/Lomme_d/Lomme_d_3.jpeg'
+        ],
+        8: [ // Marcq_en_Baroeul
+            'images/Marcq_en_Baroeul/Marcq_en_Baroeul_1.jpeg',
+            'images/Marcq_en_Baroeul/Marcq_en_Baroeul_2.jpeg',
+            'images/Marcq_en_Baroeul/Marcq_en_Baroeul_3.jpeg',
+            'images/Marcq_en_Baroeul/Marcq_en_Baroeul_4.jpeg',
+            'images/Marcq_en_Baroeul/Marcq_en_Baroeul_5.jpeg'        
+        ],
+        9: [ // Comines
+            'images/Comines/Comines_1.jpeg',
+            'images/Comines/Comines_2.jpeg'     
+        ],
+        10: [ // Colombes
+            'images/Colombes/Colombes_1.JPG',
+            'images/Colombes/Colombes_2.JPG',
+            'images/Colombes/Colombes_3.JPG',
+            'images/Colombes/Colombes_4.JPG',
+            'images/Colombes/Colombes_5.JPG',
+            'images/Colombes/Colombes_6.JPG'        
+        ],
+        11: [ // St_gabriel
+            'images/St_gabriel/St_gabriel_1.jpeg',
+            'images/St_gabriel/St_gabriel_2.jpeg',
+            'images/St_gabriel/St_gabriel_3.jpeg',
+            'images/St_gabriel/St_gabriel_4.jpeg',
+            'images/St_gabriel/St_gabriel_5.jpeg',
+            'images/St_gabriel/St_gabriel_6.jpeg',
+            'images/St_gabriel/St_gabriel_7.jpeg'
         ],
         14: [ // Roubaix Motte
             'images/RoubaixM/RM1.jpeg',
